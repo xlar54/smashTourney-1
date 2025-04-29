@@ -4,36 +4,34 @@ function HomePage()
 {
 
   return (
-    <>
-      <div className="flex flex-col text-center round-md text-white p-2 m-2">
-        <h2 className=" text-6xl p-2 m-2">Welcome!</h2>
+    <div className="flex flex-col items-center justify-center h-dvh w-dvw">
+      <div className="flex flex-col content-center text-center rounded shadow-md text-white m-2 text-4xl max-w-9/10 ">
+        <h2 className="bg-black/25 rounded shadow-md text-6xl p-2 my-6 ">Welcome!</h2>
 
-        <div className="text-4xl p-2 m-2">
-          <div >
-            <label htmlFor="username">Username:</label>
+        <label htmlFor="username" >Username:</label>
+        <input className="shrink bg-white m-5 rounded shadow-md " type="text" id="username" name="username" />
 
-            <input type="text" id="username" name="username" />
-          </div>
+        <label htmlFor="password">Password:</label>
+        <input className="shrink bg-white m-5 rounded shadow-md " type="password" id="password" name="password" />
 
-          <div >
-            <label htmlFor="password">Password:</label>
+        <div className='shrink flex flex-col text-2xl p-4 m-4 '>
 
-            <input type="password" id="password" name="password" />
+          <a href="#" className="p-2 shrink bg-green-500 hover:bg-green-700 text-white font-bold rounded shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+            Sign In
+          </a>
 
-          </div>
+
+          <a href="#" className="m-4 bg-black/25 rounded shadow-md">
+            Or
+          </a>
+
+          <a href="#" className="p-2 shrink bg-green-500 hover:bg-green-700 text-white font-bold  rounded shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+            Continue As Guest
+          </a>
+
         </div>
-
-        <div className='flex flex-col text-4xl p-2 m-2'>
-          <label>Sign In</label>
-
-          <label>Or</label>
-
-          <label>Continue As Guest</label>
-        </div>
-
-
       </div>
-    </>
+    </div>
   );
 }
 
