@@ -4,8 +4,8 @@ function HomePage()
 {
 
   return (
-    <div className="flex flex-col items-center justify-center h-dvh w-dvw">
-      <div className="flex flex-col content-center text-center rounded shadow-md text-white m-2 text-4xl max-w-9/10 ">
+    <div className="flex flex-col items-center justify-center h-dvh w-dvw"> {/* center all content and take up entire viewport */}
+      <div className="flex flex-col content-center text-center rounded shadow-md text-white m-2 text-4xl max-w-9/10 "> {/* max width is 90 percent of parent (viewport) inner flexbox to center content and text */}
         <h2 className="bg-black/25 rounded shadow-md text-6xl p-2 my-6 ">Welcome!</h2>
 
         <label htmlFor="username" >Username:</label>
