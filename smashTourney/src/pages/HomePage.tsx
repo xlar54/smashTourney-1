@@ -5,42 +5,33 @@ function HomePage()
 
   return (
     <>
-      <div className="container">
-        <h2 className="title">Welcome!</h2>
+      <div className="flex flex-col text-center round-md text-white p-2 m-2">
+        <h2 className=" text-6xl p-2 m-2">Welcome!</h2>
 
-        <div className="form-group">
-          <label htmlFor="username">Username:</label>
+        <div className="text-4xl p-2 m-2">
+          <div >
+            <label htmlFor="username">Username:</label>
 
-          <input type="text" id="username" name="username" />
+            <input type="text" id="username" name="username" />
+          </div>
+
+          <div >
+            <label htmlFor="password">Password:</label>
+
+            <input type="password" id="password" name="password" />
+
+          </div>
         </div>
 
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
+        <div className='flex flex-col text-4xl p-2 m-2'>
+          <label>Sign In</label>
 
-          <input type="password" id="password" name="password" />
+          <label>Or</label>
 
-          <span className="switch-text">
-            <link href={"/tourneyMenu"}>
-              <button >
-                Sign In
-              </button>
-            </link>
-
-            <label className="form-group">Or</label>
-
-            <link href={"/guestSignIn"}>
-              <button >
-                Continue As Guest
-              </button>
-            </link>
-
-            <link href={`/signUp`}>
-              <button >
-                Sign Up Here
-              </button>
-            </link>
-          </span>
+          <label>Continue As Guest</label>
         </div>
+
+
       </div>
     </>
   );
