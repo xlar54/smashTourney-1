@@ -1,6 +1,8 @@
-import './HomePage.css'
+import './HomePage.css';
+import { Button } from "@material-tailwind/react";
+import type { ButtonProps } from "@material-tailwind/react";
 
-function HomePage()
+const HomePage: React.FC = () =>
 {
 
   return (
@@ -16,9 +18,8 @@ function HomePage()
 
         <div className='shrink flex flex-col text-2xl p-4 m-4 '>
 
-          <a href="#" className="p-2 shrink bg-green-500 hover:bg-green-700 text-white font-bold rounded shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
-            Sign In
-          </a>
+          <Button variant="filled" >
+          </Button>
 
 
           <a href="#" className="m-4 bg-black/25 rounded shadow-md">
