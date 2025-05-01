@@ -1,6 +1,7 @@
 
 import BasicButton from "../components/BasicButton";
 import BasicInput from "../components/BasicInput";
+import BasicHeading from "../components/BasicHeading";
 
 const HomePage: React.FC = () =>
 {
@@ -8,7 +9,7 @@ const HomePage: React.FC = () =>
   return (
     <div className="flex flex-col items-center justify-center h-dvh w-dvw"> {/* center all content and take up entire viewport */}
       <div className="flex flex-col content-center text-center rounded shadow-md text-white m-2 text-4xl max-w-9/10 "> {/* max width is 90 percent of parent (viewport) inner flexbox to center content and text */}
-        <h2 className="bg-black/25 rounded shadow-md text-6xl p-2 my-6 ">Welcome!</h2>
+        <BasicHeading headingText="Welcome!" />
 
         <BasicInput labelText="Username:" htmlFor="username" name="username" id="username" />
 
