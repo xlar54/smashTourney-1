@@ -1,5 +1,6 @@
 
-import BasicButton from "../components/basicButton";
+import BasicButton from "../components/BasicButton";
+import BasicInput from "../components/BasicInput";
 
 const HomePage: React.FC = () =>
 {
@@ -9,23 +10,20 @@ const HomePage: React.FC = () =>
       <div className="flex flex-col content-center text-center rounded shadow-md text-white m-2 text-4xl max-w-9/10 "> {/* max width is 90 percent of parent (viewport) inner flexbox to center content and text */}
         <h2 className="bg-black/25 rounded shadow-md text-6xl p-2 my-6 ">Welcome!</h2>
 
-        <label htmlFor="username" >Username:</label>
-        <input className="shrink bg-white m-5 rounded shadow-md " type="text" id="username" name="username" />
+        <BasicInput labelText="Username:" htmlFor="username" name="username" id="username" />
 
-        <label htmlFor="password">Password:</label>
-        <input className="shrink bg-white m-5 rounded shadow-md " type="password" id="password" name="password" />
+
+        <BasicInput labelText="Password:" htmlFor="password" name="password" id="password" />
 
         <div className='shrink flex flex-col text-2xl p-4 m-4 '>
 
-          <BasicButton buttonLabel="Sign In">
-          </BasicButton>
+          <BasicButton buttonLabel="Sign In" />
 
           <a href="#" className="m-4 bg-black/25 rounded shadow-md">
             Or
           </a>
 
-          <BasicButton buttonLabel="Continue As Guest">
-          </BasicButton>
+          <BasicButton buttonLabel="Continue As Guest" />
 
         </div>
       </div>
