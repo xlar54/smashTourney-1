@@ -1,3 +1,26 @@
+# C++ Build Artifacts (MinGW)
+api/build/
+api/CMakeCache.txt
+api/CMakeFiles/
+*.cmake
+api/Makefile
+api/compile_commands.json 
+
+# Windows Executable
+*.exe
+
+# Object Files and Libraries
+*.obj
+*.o
+*.a
+*.lib
+*.dll 
+
+# CMake Packaging (if used)
+_CPack_Packages/
+CPackConfig.cmake
+CPackSourceConfig.cmake
+
 # Logs
 logs
 *.log
