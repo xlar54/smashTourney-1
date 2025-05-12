@@ -2,6 +2,8 @@
 api/build/
 api/CMakeCache.txt
 api/CMakeFiles/
+
+C:\Development\Full Stack\Smash Tourney Project\V6\smashTourney\smashTourney\api\build\_deps
 *.cmake
 api/Makefile
 api/compile_commands.json 
