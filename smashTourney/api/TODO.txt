@@ -1,0 +1,22 @@
+
+setup development dependencies 
+
+setup logging
+
+setup unit testing
+
+write entities (models)
+    user
+    player
+    game
+
+write data access objects
+
+write services
+    write user service
+    write player service
+    write repository service
+    write authentication service
+        might write JWT service
+    write game service
+
