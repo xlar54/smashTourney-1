@@ -1,6 +1,5 @@
 #include "libs/pch.h";
 #include "boost/date_time/local_time/local_date_time.hpp";
-#include "boost/date_time/time_zone_base.hpp";
 #include "boost/uuid/uuid.hpp";
 
 class User
@@ -61,6 +60,19 @@ public:
     void setLastLogin(const boost::local_time::local_date_time &newLastLogin)
     {
         lastLogin = newLastLogin;
+    }
+
+    User(const boost::uuids::uuid &userId, const std::string &userName, const std::string &passwordHash,
+         const std::string &passwordSalt, const boost::local_time::local_date_time &created,
+         const boost::local_time::local_date_time &lastUpdate, const boost::local_time::local_date_time &lastLogin)
+        : userId(userId),
+          userName(userName),
+          passwordHash(passwordHash),
+          passwordSalt(passwordSalt),
+          created(created),
+          lastUpdate(lastUpdate),
+          lastLogin(lastLogin)
+    {
     }
 
 private:
