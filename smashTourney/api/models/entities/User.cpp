@@ -62,10 +62,11 @@ public:
         lastLogin = newLastLogin;
     }
 
-    User(const boost::uuids::uuid &userId, const std::string &userName, const std::string &passwordHash,
+    User(const boost::uuids::uuid &userId, const boost::uuids::uuid &sessionId, const std::string &userName, const std::string &passwordHash,
          const std::string &passwordSalt, const boost::local_time::local_date_time &created,
          const boost::local_time::local_date_time &lastUpdate, const boost::local_time::local_date_time &lastLogin)
         : userId(userId),
+          sessionId(sessionId),
           userName(userName),
           passwordHash(passwordHash),
           passwordSalt(passwordSalt),
@@ -77,6 +78,7 @@ public:
 
 private:
     boost::uuids::uuid userId;
+    boost::uuids::uuid sessionId;
     std::string userName;
     std::string passwordHash;
     std::string passwordSalt;
