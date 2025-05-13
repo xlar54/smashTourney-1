@@ -1,6 +1,7 @@
 #include "libs/pch.h";
 #include "boost/date_time/local_time/local_date_time.hpp";
 #include "boost/uuid/uuid.hpp";
+#include "Character.cpp";
 
 class Player
 {
@@ -93,6 +94,40 @@ public:
     {
         // add character to charactersPlayed
     }
+    Player(const boost::uuids::uuid &newUserId,
+           const boost::uuids::uuid &newGameId,
+           const std::string &newPlayerName,
+           const std::string &newPasswordHash,
+           const std::string &newPasswordSalt,
+           const boost::local_time::local_date_time &newCreated,
+           const boost::local_time::local_date_time &newLastPlayed,
+           const boost::local_time::local_date_time &newLastUpdate,
+           const std::vector<boost::local_time::local_date_time> &newMatchWins,
+           const std::vector<boost::local_time::local_date_time> &newGameWins,
+           const std::vector<boost::local_time::local_date_time> &newGamesPlayed,
+           const std::vector<boost::local_time::local_date_time> &newMatchesPlayed,
+           const std::vector<Character> &newCharactersPlayed,
+           const Character &newCurrentCharacter,
+           int newCurrentScore,
+           int newCurrentRound,
+           bool newHasVoted)
+        : userId(newUserId),
+          gameId(newGameId),
+          playerName(newPlayerName),
+          passwordHash(newPasswordHash),
+          passwordSalt(newPasswordSalt),
+          created(newCreated),
+          lastPlayed(newLastPlayed),
+          lastUpdate(newLastUpdate),
+          matchWins(newMatchWins),
+          gameWins(newGameWins),
+          gamesPlayed(newGamesPlayed),
+          matchesPlayed(newMatchesPlayed),
+          charactersPlayed(newCharactersPlayed),
+          currentCharacter(newCurrentCharacter),
+          currentScore(newCurrentScore),
+          currentRound(newCurrentRound),
+          hasVoted(newHasVoted) {}
 
 private:
     boost::uuids::uuid userId;
