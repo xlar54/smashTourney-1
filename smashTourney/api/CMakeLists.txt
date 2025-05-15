@@ -18,7 +18,5 @@ if(Boost_FOUND)
 endif()
 
 
-#Gemini Thinks this will include my pch for mingw 
-
 target_precompile_headers(tourneyapi PUBLIC libs/pch.h
 )

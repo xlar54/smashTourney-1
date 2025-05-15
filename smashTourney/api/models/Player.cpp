@@ -1,7 +1,7 @@
-#include "libs/pch.h";
-#include "boost/date_time/local_time/local_date_time.hpp";
-#include "boost/uuid/uuid.hpp";
-#include "Character.cpp";
+#include "libs/pch.h"
+#include "boost/date_time/local_time/local_date_time.hpp"
+#include "boost/uuid/uuid.hpp"
+#include "Character.cpp"
 
 class Player
 {
