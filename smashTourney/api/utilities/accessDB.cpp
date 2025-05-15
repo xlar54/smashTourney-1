@@ -1,13 +1,14 @@
-#include "api/libs/sqlite/sqlite3.h";
-#include "api/libs/pch.h";
+#include "../libs/sqlite/sqlite3.h"
+#include "../libs/pch.h"
 
-class accessDB
+class AccessDB
 {
     sqlite3 *db;
 
     int exit = 0;
 
-    accessDB(const std::string &url)
+public:
+    AccessDB(const std::string &url)
     {
         const char *urlPtr = url.c_str();
 
@@ -28,7 +29,7 @@ class accessDB
             std::cout << sqlite3_errmsg(db) << std::endl;
         }
     }
-    ~accessDB()
+    ~AccessDB()
     {
         sqlite3_close(db);
         db = NULL;

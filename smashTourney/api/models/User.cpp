@@ -1,4 +1,4 @@
-#include "libs/pch.h"
+#include "../libs/pch.h"
 #include "boost/date_time/local_time/local_date_time.hpp"
 #include "boost/uuid/uuid.hpp"
 
@@ -61,7 +61,7 @@ public:
     {
         lastLogin = newLastLogin;
     }
-
+    User(){}
     User(const boost::uuids::uuid &userId, const boost::uuids::uuid &sessionId, const std::string &userName, const std::string &passwordHash,
          const std::string &passwordSalt, const boost::local_time::local_date_time &created,
          const boost::local_time::local_date_time &lastUpdate, const boost::local_time::local_date_time &lastLogin)

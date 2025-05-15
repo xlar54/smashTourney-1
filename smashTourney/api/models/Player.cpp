@@ -1,4 +1,4 @@
-#include "libs/pch.h"
+#include "../libs/pch.h"
 #include "boost/date_time/local_time/local_date_time.hpp"
 #include "boost/uuid/uuid.hpp"
 #include "Character.cpp"
@@ -94,6 +94,7 @@ public:
     {
         // add character to charactersPlayed
     }
+    Player(){}
     Player(const boost::uuids::uuid &newUserId,
            const boost::uuids::uuid &newGameId,
            const std::string &newPlayerName,
