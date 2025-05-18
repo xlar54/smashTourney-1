@@ -1,65 +1,51 @@
-#include "../libs/pch.h"
-#include "boost/date_time/local_time/local_date_time.hpp"
-#include "boost/uuid/uuid.hpp"
+#include "Character.h"
 
-class Character
-{
-    enum Archetype
-    {
-        ALL_ROUNDER,
-        ZONE_BREAKER,
-        ZONERS,
-        TRAPPERS,
-        GRAPPLERS,
-        FOOTSIES,
-        HIT_AND_RUN,
-        GLASS_CANNON
-    };
+// this file actually contains the code *based on the class definition in the .h file*
 
-    enum FallSpeed
-    {
-        FLOATY,
-        FAST_FALLER
-    };
+// public constructors (this first one doesnt do anything and could be removed (remove from both .cpp and .h files))
+Character::Character()
+  : characterId{}
+  , characterName{}
+  , archetype(Archetype::ALL_ROUNDER)
+  , weight(Weight::MIDDLEWEIGHT)
+  , fallSpeed(FallSpeed::FLOATY)
+{}
 
-    enum Weight
-    {
-        LIGHTWEIGHT,
-        MIDDLEWEIGHT,
-        HEAVYWEIGHT
-    };
+Character::Character(const boost::uuids::uuid &id,
+                     std::string name,
+                     Archetype a,
+                     Weight w,
+                     FallSpeed f)
+  : characterId(id)
+  , characterName(std::move(name))
+  , archetype(a)
+  , weight(w)
+  , fallSpeed(f)
+{}
 
-public:
-    Character() {}
-    Character(const boost::uuids::uuid &newCharacterId,
-              const std::string &newCharacterName,
-              const Archetype &newArchetype,
-              const Weight &newWeight,
-              const FallSpeed &newFallSpeed)
-        : characterId(newCharacterId),
-          characterName(newCharacterName) {}
+// your public getter methods
 
-    boost::uuids::uuid getCharacterId() const { return characterId; }
+const boost::uuids::uuid& Character::getCharacterId() const { 
+    return characterId; 
+}
+const std::string&        Character::getCharacterName() const { 
+    return characterName; 
+}
 
-    std::string getCharacterName() const { return characterName; }
+Character::Archetype      Character::getArchetype() const { 
+    return archetype; 
+}
 
-    Archetype getArchetype() const { return Archetype; }
+Character::Weight         Character::getWeight() const { 
+    return weight; 
+}
 
-    Weight getWeight() const { return getWeight; }
+Character::FallSpeed      Character::getFallSpeed() const { 
+    return fallSpeed; 
+}
 
-    FallSpeed getFallSpeed() const { return fallSpeed; }
-
-    void setCharacterId(const boost::uuids::uuid &newCharacterId) { characterId = newCharacterId; }
-
-    void setCharacterName(const std::string &newCharacterName) { characterName = newCharacterName; }
-
-    void setArchetype(const Archetype &newArchetype) { archetype = newArchetype; }
-
-    void setWeight(const Weight &newWeight) { weight = newWeight; }
-
-    void setFallSpeed(const FallSpeed &newFallSpeed) { fallSpeed = newFallSpeed; }
-
-private:
-    boost::uuids::uuid characterId;
-    std::string characterName;
-};
+void Character::setCharacterId(const boost::uuids::uuid &id)    { characterId   = id; }
+void Character::setCharacterName(std::string name)              { characterName = std::move(name); }
+void Character::setArchetype(Archetype a)                       { archetype     = a; }
+void Character::setWeight(Weight w)                             { weight        = w; }
+void Character::setFallSpeed(FallSpeed f)                       { fallSpeed     = f; }
